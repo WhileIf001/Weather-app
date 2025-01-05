@@ -11,13 +11,10 @@
 }
 body{
   background: url(Background/Mountain.webp);
-  background-repeat: no-repeat;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
+  background-size: 100vh;
 }
 p {
   color: aqua;
@@ -98,14 +95,18 @@ p {
     min-height: 600px;
   }
   .inputCity {
-    height: 120px;
+    height: 150px;
   }
   .getWeather {
-    height: 60px;
-    box-shadow: 0px 10px #0A9DB7;
+    height: 90px;
+    box-shadow: 0px 12px #0A9DB7;
   }
   .getWeather:active {
     transform: translateY(10px);
     box-shadow: 0px 6px #0A9DB7;
+  }
+  .main+p {
+    font-size: 60px;
+    margin-bottom: 50px;
   }
 }
