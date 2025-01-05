@@ -54,19 +54,19 @@ async function getinfo(data){
       timeAnimation()
     }
     if (Skyw=='few clouds'){
-      icon.style.cssText="background: url('/Icons/Half-Cloudy.Webp'); background-size: 100%;"
+      icon.style.cssText="background: url('Icons/Half-Cloudy.Webp'); background-size: 100%;"
       timeAnimation()
     }
     if (Skyw=='scattered clouds'){
-      icon.style.cssText="background: url('/Icons/hazy.Webp'); background-size: 100%;"
+      icon.style.cssText="background: url('Icons/hazy.Webp'); background-size: 100%;"
       timeAnimation()
     }
     if (Skyw=='light rain'){
-      icon.style.cssText="background: url('/Icons/rain.Webp'); background-size: 100%;"
+      icon.style.cssText="background: url('Icons/rain.Webp'); background-size: 100%;"
       timeAnimation()
     }
     if (Skyw=='overcast clouds'){
-      icon.style.cssText="background: url('/Icons/cloudy.Webp'); background-size: 100%;"
+      icon.style.cssText="background: url('Icons/cloudy.Webp'); background-size: 100%;"
       timeAnimation()
     }
   }catch(e){
