@@ -46,6 +46,7 @@ async function getinfo(data){
     Sky.innerHTML = `Sky condition: ${Skyw}`;
     switch(Skyw){
       case "clear sky":
+        ErrorTag.innerText = "clear"
         icon.style.background="url(Icons/clear.Webp)"
       case "few clouds":
         icon.style.background="url(Icons/hazy.Webp)"
