@@ -31,7 +31,7 @@ async function getrequest(){
     }
     setTimeout(() => {
       ErrorTag.innerText = ''
-    }, 5000)
+    }, 3000)
   }
 }
 async function getinfo(data){
@@ -44,26 +44,21 @@ async function getinfo(data){
     Temp.innerHTML = `Temperature: ${convert(Temperature).toFixed(1)} C°`;
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
-    if (Skyw=='clear sky'){
-      icon.style.background="url(Icons/rain.Webp)"
-    }
-    if (Skyw=='few clouds'){
-      icon.style.background="url(Icons/hazy.Webp)"
-    }
-    if (Skyw=='scattered clouds'){ollo
-      icon.style.background="url(Icons/hazy.Webp)"
-    }
-    if ("rain" in Skyw){
-      icon.style.background="url(Icons/rain.Webp)"
-    }
-    if (Skyw=='clouds'){
-      icon.style.background="url(Icons/cloudy.Webp)"
-    }
-    if("lightning" in Skyw){
-      icon.style.background="url(Icons/tstorms.Webp)"
-    }
-    if ("snow" in Skyw) {
-      icon.style.background="url(Icons/snow.Webp)"
+    switch(Skyw){
+      case "clear sky":
+        icon.style.background="url(Icons/clear.Webp)"
+      case "few clouds":
+        icon.style.background="url(Icons/hazy.Webp)"
+      case "scattered clouds":
+        icon.style.background="url(Icons/hazy.Webp)"
+      case "rainy" || "light rain":
+        icon.style.background="url(Icons/rain.Webp)"
+      case "clouds":
+        icon.style.background="url(Icons/cloudy.Webp)"
+      case "light snow" || "snowy":
+        icon.style.background="url(Icons/snow.Webp)"
+      case "Rain and thunder" || "thunder and lightning":
+        icon.style.background="url(Icons/tstorms.Webp)"
     }
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
@@ -73,7 +68,7 @@ async function getinfo(data){
       }
       setTimeout(() => {
         ErrorTag.innerText = ''
-      }, 5000)
+      }, 3000)
     }
 }
 
