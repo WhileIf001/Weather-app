@@ -62,10 +62,13 @@ async function getinfo(data){
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
       ErrorTag.innerText = 'Your City Is Not Defined'
+    }else{
+        ErrorTag.innerText = ''
+      }
+      setTimeout(() => {
+        ErrorTag.innerText = ''
+      }, 5000)
     }
-    
-  }
-  
 }
 
 
