@@ -1,0 +1,112 @@
+:root {
+  --font-size: 1.5rem;
+}
+@font-face {
+  font-family: Farnaz;
+  src: url(Fonts/Farnaz.ttf);
+}
+@font-face {
+  font-family: GraphitePro;
+  src: url(Fonts/GraphitePro.ttf);
+}
+body{
+  background: url(Background/Mountain.webp);
+  padding: 0;
+  margin: 0;
+  min-height: 90vh;
+  background-size: 100vh;
+}
+p {
+  color: aqua;
+  font-size: var(--font-size);
+  font-family: GraphitePro;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 500px;
+  gap: 40px;
+}
+.WeatherBox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  width: 80%;
+}
+.icon{
+  width: 60%;
+  min-height: 220px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  animation: anim 10s linear forwards;
+}
+.inputCity, .getWeather {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  font-family: Farnaz;
+}
+.inputCity {
+  min-width: 50%;
+  height: 60px;
+  text-decoration: none;
+  outline: none;
+  font-size: var(--font-size);
+  border: 2px solid aqua;
+}
+.getWeather {
+  border: none;
+  height: 45px;
+  font-size: var(--font-size);
+  background: aqua;
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0px 5px #0A9DB7;
+}
+.getWeather:active {
+  transform: translateY(5px);
+  box-shadow: 0px 2px #0A9DB7;
+}
+.Ptags p:not(.errortag){
+  animation: anim 10s linear forwards;
+}
+@keyframes anim {
+  0%{opacity: 0}
+  50%{opacity: 0.5}
+  100%{opacity: 1}
+}
+.main+p {
+  font: 30px GraphitePro;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  white-space: nowrap;
+  color: aqua;
+}
+@media (min-width: 768px){
+  :root {
+    --font-size: 3rem;
+  }
+  .icon {
+    min-height: 600px;
+  }
+  .inputCity {
+    height: 150px;
+  }
+  .getWeather {
+    height: 90px;
+    box-shadow: 0px 12px #0A9DB7;
+  }
+  .getWeather:active {
+    transform: translateY(10px);
+    box-shadow: 0px 6px #0A9DB7;
+  }
+  .main+p {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+}
