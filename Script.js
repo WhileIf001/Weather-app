@@ -45,19 +45,25 @@ async function getinfo(data){
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
     if (Skyw=='clear sky'){
-      icon.style.cssText = "background: url(Icons/clear.webp); background-size: 100%;"
+      icon.style.background="url(Icons/rain.Webp)"
     }
     if (Skyw=='few clouds'){
-      icon.style.cssText="background: url('Icons/Half-Cloudy.webp'); background-size: 100%;"
+      icon.style.background="url(Icons/hazy.Webp)"
     }
-    if (Skyw=='scattered clouds'){
-      icon.style.cssText="background: url('Icons/hazy.webp'); background-size: 100%;"
+    if (Skyw=='scattered clouds'){ollo
+      icon.style.background="url(Icons/hazy.Webp)"
     }
-    if (Skyw=='light rain'){
-      icon.style.cssText="background: url('Icons/rain.webp'); background-size: 100%;"
+    if ("rain" in Skyw){
+      icon.style.background="url(Icons/rain.Webp)"
     }
-    if (Skyw=='overcast clouds'){
-      icon.style.cssText="background: url('Icons/cloudy.webp'); background-size: 100%;"
+    if (Skyw=='clouds'){
+      icon.style.background="url(Icons/cloudy.Webp)"
+    }
+    if("lightning" in Skyw){
+      icon.style.background="url(Icons/tstorms.Webp)"
+    }
+    if ("snow" in Skyw) {
+      icon.style.background="url(Icons/snow.Webp)"
     }
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
