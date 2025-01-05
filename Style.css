@@ -41,6 +41,7 @@ p {
   min-height: 220px;
   box-sizing: border-box;
   border-radius: 5px;
+  transition: 1s;
 }
 .inputCity, .getWeather {
   text-align: center;
