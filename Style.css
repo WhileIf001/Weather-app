@@ -98,18 +98,14 @@ p {
     min-height: 600px;
   }
   .inputCity {
-    height: 150px;
+    height: 120px;
   }
   .getWeather {
-    height: 90px;
-    box-shadow: 0px 12px #0A9DB7;
+    height: 60px;
+    box-shadow: 0px 10px #0A9DB7;
   }
   .getWeather:active {
     transform: translateY(10px);
     box-shadow: 0px 6px #0A9DB7;
-  }
-  .main+p {
-    font-size: 60px;
-    margin-bottom: 50px;
   }
 }
