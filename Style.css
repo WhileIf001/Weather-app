@@ -15,6 +15,7 @@ body{
   margin: 0;
   min-height: 90vh;
   background-size: 100vh;
+  box-sizing: border-box;
 }
 p {
   color: aqua;
@@ -39,9 +40,8 @@ p {
 .icon{
   width: 60%;
   min-height: 220px;
-  box-sizing: border-box;
   border-radius: 5px;
-  transition: 1s;
+  transition: 1s ease-in;
 }
 .inputCity, .getWeather {
   text-align: center;
@@ -83,7 +83,7 @@ p {
     --font-size: 3rem;
   }
   .icon {
-    min-height: 600px;
+    min-height: 450px;
   }
   .inputCity {
     height: 150px;
