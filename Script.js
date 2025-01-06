@@ -44,25 +44,25 @@ async function getinfo(data){
     Temp.innerHTML = `Temperature: ${convert(Temperature).toFixed(1)} C°`;
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
-    if("clear sky"){
+    if(Skyw=="clear sky"){
       icon.style.background="url(Icons/clear.Webp)"
     }
-    if("few clouds"){
+    if(Skyw=="few clouds"){
       icon.style.background="url(Icons/hazy.Webp)"
     }
-    if("scattered clouds"){
+    if(Skyw=="scattered clouds"){
       icon.style.background="url(Icons/hazy.Webp)"
     }
-    if("rainy" || "light rain"){
+    if(Skyw=="rainy" || Skyw=="light rain"){
       icon.style.background="url(Icons/rain.Webp)"
     }
-    if("clouds"){
+    if(Skyw=="clouds"){
       icon.style.background="url(Icons/cloudy.Webp)"
     }
-    if("light snow" || "snowy"){
+    if(Skyw=="light snow" || Skyw=="snowy"){
       icon.style.background="url(Icons/snow.Webp)"
     }
-    if("rain and thunder" || "thunder and lightning"){
+    if(Skyw=="rain and thunder" || Skyw=="thunder and lightning"){
       icon.style.background="url(Icons/tstorms.Webp)"
     }
   }catch(e){
