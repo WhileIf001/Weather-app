@@ -47,19 +47,16 @@ async function getinfo(data){
     if(Skyw=="clear sky"){
       icon.style.background="url(Icons/clear.Webp)"
     }
-    if(Skyw=="few clouds"){
+    if(Skyw=="few clouds" || Skyw=="scattered clouds"){
       icon.style.background="url(Icons/hazy.Webp)"
     }
-    if(Skyw=="scattered clouds"){
-      icon.style.background="url(Icons/hazy.Webp)"
-    }
-    if(Skyw=="rainy" || Skyw=="light rain"){
+    if(Skyw=="heavy rain" || Skyw=="moderate rain" || Skyw=="light rain"){
       icon.style.background="url(Icons/rain.Webp)"
     }
-    if(Skyw=="clouds"){
+    if(Skyw=="clouds" || Skyw=="overcast clouds"){
       icon.style.background="url(Icons/cloudy.Webp)"
     }
-    if(Skyw=="light snow" || Skyw=="snowy"){
+    if(Skyw=="heavy snow" || Skyw=="moderate snow" || Skyw=="light snow"){
       icon.style.background="url(Icons/snow.Webp)"
     }
     if(Skyw=="rain and thunder" || Skyw=="thunder and lightning"){
