@@ -45,22 +45,22 @@ async function getinfo(data){
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
     if(Skyw=="clear sky"){
-      icon.style.background="url(Icons/clear.Webp)"
+      icon.style.cssText="background:url(Icons/clear.webp);background-size: 100%;"
     }
-    if(Skyw=="few clouds" || Skyw=="scattered clouds"){
-      icon.style.background="url(Icons/hazy.Webp)"
+    if(Skyw=="few clouds" || Skyw=="scattered clouds" || Skyw=="fog" || Skyw=="haze"){
+      icon.style.cssText="background:url(Icons/hazy.webp);background-size: 100%"
     }
-    if(Skyw=="heavy rain" || Skyw=="moderate rain" || Skyw=="light rain"){
-      icon.style.background="url(Icons/rain.Webp)"
+    if(Skyw=="heavy intensity rain" || Skyw=="moderate rain" || Skyw=="rain" || Skyw=="shower rain" || Skyw=="light rain"){
+      icon.style.cssText="background:url(Icons/rain.webp);background-size:100%;"
     }
-    if(Skyw=="clouds" || Skyw=="overcast clouds"){
-      icon.style.background="url(Icons/cloudy.Webp)"
+    if(Skyw=="clouds" || Skyw=="overcast clouds" || Skyw=="broken clouds"){
+      icon.style.cssText="background:url(Icons/cloudy.webp);background-size: 100%"
     }
-    if(Skyw=="heavy snow" || Skyw=="moderate snow" || Skyw=="light snow"){
-      icon.style.background="url(Icons/snow.Webp)"
+    if(Skyw=="heavy intensity snow" || Skyw=="moderate snow" || Skyw=="snow" || Skyw=="shower snow" || Skyw=="light snow"){
+      icon.style.cssText="background:url(Icons/snow.webp);background-size: 100%"
     }
-    if(Skyw=="rain and thunder" || Skyw=="thunder and lightning"){
-      icon.style.background="url(Icons/tstorms.Webp)"
+    if(Skyw=="rain and thunder" || Skyw=="thunder and lightning" || Skyw=="squalls"){
+      icon.style.cssText="background:url(Icons/tstorms.webp);background-size:100%"
     }
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
