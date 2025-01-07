@@ -45,22 +45,22 @@ async function getinfo(data){
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
     if(Skyw=="clear sky"){
-      icon.style.cssText="background:url(Icons/clear.webp);background-size: 100%;"
+      icon.classList.add("clear","show");
     }
     if(Skyw=="few clouds" || Skyw=="scattered clouds" || Skyw=="fog" || Skyw=="haze"){
-      icon.style.cssText="background:url(Icons/hazy.webp);background-size: 100%"
+      icon.classList.add("fog","show");
     }
     if(Skyw=="heavy intensity rain" || Skyw=="moderate rain" || Skyw=="rain" || Skyw=="shower rain" || Skyw=="light rain"){
-      icon.style.cssText="background:url(Icons/rain.webp);background-size:100%;"
+      icon.classList.add("rain","show");
     }
-    if(Skyw=="clouds" || Skyw=="overcast clouds" || Skyw=="broken clouds"){
-      icon.style.cssText="background:url(Icons/cloudy.webp);background-size: 100%"
+    if(Skyw=="clouds" || Skyw=="overcast clouds" || Skyw=="broken clouds" || Skyw=="mist"){
+      icon.classList.add("clouds","show");
     }
     if(Skyw=="heavy intensity snow" || Skyw=="moderate snow" || Skyw=="snow" || Skyw=="shower snow" || Skyw=="light snow"){
-      icon.style.cssText="background:url(Icons/snow.webp);background-size: 100%"
+      icon.classList.add("snow","show");
     }
     if(Skyw=="rain and thunder" || Skyw=="thunder and lightning" || Skyw=="squalls"){
-      icon.style.cssText="background:url(Icons/tstorms.webp);background-size:100%"
+      icon.classList.add("squalls","show");
     }
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
@@ -73,7 +73,5 @@ async function getinfo(data){
       }, 3000)
     }
 }
-
-
 
 Getweather.addEventListener('click', getrequest);
