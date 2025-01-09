@@ -7,6 +7,14 @@ var Temp = document.querySelector('.Temp');
 var Sky = document.querySelector('.Sky');
 var Wind = document.querySelector('.Wind');
 var ErrorTag = document.querySelector('.errortag');
+function addingClass(variableClass){
+  if(icon.classList.length>1){
+    icon.classList.replace(icon.classList[1],variableClass)
+  }
+  else{
+    icon.classList.add(variableClass, "show");
+  }
+};
 setInterval(()=>{
   if (InputCity.value.length>0) {
     InputCity.style.fontFamily = "GraphitePro"
@@ -45,22 +53,22 @@ async function getinfo(data){
     Wind.innerHTML = `Wind Speed: ${windspeed} km/h`;
     Sky.innerHTML = `Sky condition: ${Skyw}`;
     if(Skyw=="clear sky"){
-      icon.classList.add("clear","show");
+      addingClass("clear");
     }
     if(Skyw=="few clouds" || Skyw=="scattered clouds" || Skyw=="fog" || Skyw=="haze"){
-      icon.classList.add("fog","show");
+      addingClass("fog");
     }
     if(Skyw=="heavy intensity rain" || Skyw=="moderate rain" || Skyw=="rain" || Skyw=="shower rain" || Skyw=="light rain"){
-      icon.classList.add("rain","show");
+      addingClass("rain");
     }
     if(Skyw=="clouds" || Skyw=="overcast clouds" || Skyw=="broken clouds" || Skyw=="mist"){
-      icon.classList.add("clouds","show");
+      addingClass("clouds", "");
     }
     if(Skyw=="heavy intensity snow" || Skyw=="moderate snow" || Skyw=="snow" || Skyw=="shower snow" || Skyw=="light snow"){
-      icon.classList.add("snow","show");
+      addingClass("snow");
     }
     if(Skyw=="rain and thunder" || Skyw=="thunder and lightning" || Skyw=="squalls"){
-      icon.classList.add("squalls","show");
+      addingClass("squalls");
     }
   }catch(e){
     if (e['message'] == "Cannot read properties of undefined (reading 'speed')"){
