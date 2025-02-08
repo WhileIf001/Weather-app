@@ -41,6 +41,7 @@ async function getrequest(){
       ErrorTag.innerText = ''
     }, 3000)
   }
+  icon.style.backgroundRepeat = "no-repeat";
 }
 async function getinfo(data){
     try{
